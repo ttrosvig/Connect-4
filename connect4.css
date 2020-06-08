@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px white;
+  z-index: 0;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  /* TODO: make into circles */
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.piece.p1 {
+  background-color: red;
+}
+
+.piece.p2 {
+  background-color: blue;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: white;
+}
+
+#title {
+  position: absolute;
+  z-index: 3;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size:120px;
+	letter-spacing:0.1em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  text-shadow: 
+						8px 8px blue,
+						20px 20px red;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(33,66,236);
+  background: linear-gradient(90deg, rgba(33,66,236,1) 12%, rgba(255,0,52,0.7455357142857143) 89%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* animation */
+
+.fall1 {
+  animation-name: fall-animation1;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation1 {
+  from {
+    transform: translateY(-420px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fall2 {
+  animation-name: fall-animation2;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation2 {
+  from {
+    transform: translateY(-350px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fall3 {
+  animation-name: fall-animation3;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation3 {
+  from {
+    transform: translateY(-280px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fall4 {
+  animation-name: fall-animation4;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation4 {
+  from {
+    transform: translateY(-210px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fall5 {
+  animation-name: fall-animation5;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation5 {
+  from {
+    transform: translateY(-140px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fall6 {
+  animation-name: fall-animation6;
+  animation-duration: 500ms;
+}
+
+@keyframes fall-animation6 {
+  from {
+    transform: translateY(-70px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
